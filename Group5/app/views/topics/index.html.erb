@@ -2,35 +2,42 @@
 <div class="page-header">
   <h1 style="text-align:center;"> Tópicos</h1>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th>Título</th>
-      <th>Descrição</th>
-      <th>Habilitado</th>
-      <th>Histórico</th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @topics.each do |topic| %>
+<div style="padding: 0% 3%;">
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= link_to topic.id, topic_path(topic) %></td>
-        <td><%= topic.title %></td>
-        <td><%= topic.description %></td>
-        <td><%= topic.enable %></td>
-        <td><%=l topic.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_topic_path(topic), :class => 'btn btn-default btn-xs' %>
-
-        </td>
+        <th><%= model_class.human_attribute_name(:id) %></th>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>Habilitado</th>
+        <th>Histórico</th>
+        <th><%=t '.actions', :default => t("helpers.actions") %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @topics.each do |topic| %>
+        <tr>
+          <td><%= link_to topic.id, topic_path(topic) %></td>
+          <td><%= topic.title %></td>
+          <td><%= topic.description %></td>
+          <td><%= topic.enable %></td>
+          <td><%=l topic.created_at %></td>
+          <td>
+            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                        edit_topic_path(topic), :class => 'btn btn-default btn-xs' %>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_topic_path,
-            :class => 'btn btn-primary' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to t('.new', :default => t("helpers.links.new")),
+              new_topic_path,
+              :class => 'btn btn-primary' %>
+
+  <button class="btn btn-default">
+    <%= link_to "Home", '/' %>            
+  </button>
+              
+</div>

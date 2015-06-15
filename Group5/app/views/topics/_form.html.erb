@@ -1,5 +1,5 @@
 <%= form_for @topic, :html => { :class => "form-horizontal topic" } do |f| %>
-
+<div style="padding: 0% 3%;">
     <% if @topic.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
@@ -37,9 +37,10 @@
     <%= error_span(@topic[:enable]) %>
   </div>
 
-
+  <br><br><br>
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
             topics_path, :class => 'btn btn-default' %>
+</div>
 
 <% end %>
