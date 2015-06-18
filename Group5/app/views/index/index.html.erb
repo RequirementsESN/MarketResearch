@@ -36,7 +36,7 @@
 
     <%= javascript_include_tag "application" %>
   </head>
-  <body>
+  <body style="   font-family: 'Tangerine', serif;">
 
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -45,9 +45,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Questionário</a>
+        <a class="navbar-brand" href="#" style="font-size: 35px; border: 2px solid #E6E6E6;">Questionário</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav" style="font-size: 25px;">
             <li><%= link_to "Tópicos", 'topics'%></li>
             <li><%= link_to "Questões", 'questions'  %></li>
           </ul>
@@ -57,9 +57,13 @@
 
     <div id="conteiner">
     <%= yield %>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <span style="font-size: 60px;">Colocar Texto Sobre a Aplicação Aqui</span> 
-      <br><br><br><br><br><br><br>
+      <p id="text">
+        O sistema está sendo desenvolvido com o objetivo de agilizar o processo de validação de questionários, os quais são utilizados para a realização de pesquisas de mercado, no intuito de captar clientes para a empresa ESN.
+      </p>
+      <br><br>
+      <p id="text">
+        A última atualização da aplicação possibilita o cadastro de tópicos e questões, com intuito produzir um questionário.
+      </p>
     </div>
 
     <div class="container">
