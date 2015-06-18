@@ -42,6 +42,23 @@ class TopicsController < ApplicationController
   def update
     respond_to do |format|
       if @topic.update(topic_params)
+        if @topic.enable == false
+          puts "Topico passou pra falso"
+          @questions = Question.all
+          @questions.each do |question|
+            puts "Laco das questoes"
+            if question.topic_id == @topic.id
+              question.enable = false
+              puts "Trocou uma QUESTAAAAAAAAAAAAAO"
+              puts question.topic_id, @topic.id
+              puts question.enable
+            else
+              
+            end
+          end
+        else
+        end
+
         format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
         format.json { render :show, status: :ok, location: @topic }
       else
