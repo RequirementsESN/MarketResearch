@@ -117,3 +117,10 @@ gem 'therubyracer'
 <pre>
 <span class="highlight">your_IP_or_domain</span>:3000
 </pre>
+
+<pre>
+	Reference:
+		How To Install Ruby on Rails using RVM
+		Acess at: https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-an-debian-7-0-wheezy-vps-using-rvm
+		Online in: 24/06/2015
+</pre>
