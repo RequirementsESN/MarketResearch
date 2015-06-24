@@ -1,6 +1,6 @@
 # MarketResearch
 
-To Install Ruby on Rails
+<strong> To Install Ruby on Rails</strong>
 
 Step One –– Install RVM
 We will be installing RVM from the project's website, so we will not be relying on Debian's default repositories for the actual installation.
