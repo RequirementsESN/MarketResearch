@@ -1,14 +1,15 @@
 <%- model_class = Topic -%>
+<div style="padding: 0% 3%;">
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1 style="text-align:center;">Tópico</h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
+  <dt><strong>Título:</strong></dt>
   <dd><%= @topic.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dt><strong>Descrição:</strong></dt>
   <dd><%= @topic.description %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:enable) %>:</strong></dt>
+  <dt><strong>Habilitação:</strong></dt>
   <dd><%= @topic.enable %></dd>
 </dl>
 
@@ -17,3 +18,4 @@
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_topic_path(@topic), :class => 'btn btn-default' %>
 
+</div>

@@ -1,16 +1,17 @@
 <%- model_class = Question -%>
+<div style="padding: 0% 3%;">
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1 style="text-align:center;">Questão</h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
+  <dt><strong>Título:</strong></dt>
   <dd><%= @question.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:questionType) %>:</strong></dt>
+  <dt><strong>Tipo de Questão:</strong></dt>
   <dd><%= @question.questionType %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:enable) %>:</strong></dt>
+  <dt><strong>Habilitação:</strong></dt>
   <dd><%= @question.enable %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:topic_id) %>:</strong></dt>
+  <dt><strong>Tópico:</strong></dt>
   <dd><%= @question.topic_id %></dd>
 </dl>
 
@@ -19,3 +20,4 @@
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_question_path(@question), :class => 'btn btn-default' %>
 
+</div>

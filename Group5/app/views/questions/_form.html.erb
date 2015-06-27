@@ -16,21 +16,23 @@
   <% end %>
 
   <div class="control-group">
-    <%= f.label :title, :class => 'control-label' %>
+    <strong>Título</strong>
     <div class="controls">
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
     <%= error_span(@question[:title]) %>
   </div>
   <div class="control-group">
-    <%= f.label :questionType, :class => 'control-label' %>
+  <br>  
+  <strong>Tipo de Questão</strong>
     <div class="controls">
-      <%= f.text_field :questionType, :class => 'form-control' %>
+      <%= f.select  :questionType, ['Check Box', 'Drop List', 'Text Area', 'Número', 'Radio Button'],:class => 'form-control' %>
     </div>
     <%= error_span(@question[:questionType]) %>
   </div>
   <div class="control-group">
-    <%= f.label :enable, :class => 'control-label' %>
+    <br>
+    <strong>Habilitação</strong>
     <div class="controls">
       <%= f.check_box :enable %>
     </div>
@@ -40,7 +42,7 @@
 
 
   <div class="control-group">
-    <%= f.label :topic_id, :class => 'control-label' %>
+    <br> <strong>Tópico</strong>
     <div class="controls">
       <%= f.select :topic_id, Topic.all.collect{|topic| [topic.title, topic.id]} , :class => 'form-control' %>
     </div>
